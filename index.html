@@ -43,17 +43,18 @@
           div.onclick = () => vote(prod[0], a[0], b[0]);
           container.appendChild(div);
         });
+      }
 
-        async function vote(choice, optionA, optionB) {
-          await fetch(API_URL, {
-            method: "POST",
-            body: JSON.stringify({ choice, optionA, optionB }),
-            headers: { "Content-Type": "application/json" }
-          });
-          showPair();
-        }
+      async function vote(choice, optionA, optionB) {
+        await fetch(API_URL, {
+          method: "POST",
+          body: JSON.stringify({ choice, optionA, optionB }),
+          headers: { "Content-Type": "application/json" }
+        });
+        showPair();
+      }
 
-        loadProducts();
+      loadProducts();
     </script>
   </body>
 </html>
