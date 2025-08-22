@@ -21,7 +21,7 @@
       async function loadProducts() {
         const res = await fetch(API_URL);
         products = await res.json();
-        conole.log(products);
+        console.log(products);
         showPair();
       }
 
