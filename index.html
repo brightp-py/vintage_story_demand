@@ -42,7 +42,7 @@
         [a, b].forEach((prod, idx) => {
           const div = document.createElement("div");
           div.className = "product";
-          div.innerHTML = `<h2>${prod[1]}</h2>`;
+          div.innerHTML = `<h2>${prod[0]}</h2>`;
           div.onclick = () => vote(prod[0], a[0], b[0]);
           container.appendChild(div);
         });
